@@ -1,0 +1,113 @@
+baseURL = "http://student.cs.uwaterloo.ca/~z374zhou/"
+languageCode = "en-us"
+title = "CKive"
+theme = "anatole"
+copyright = "2020-{{ YEAR }}"
+
+# Syntax highlighting
+pygmentsUseClasses = true   
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+
+
+# params section
+[params]
+title = "CKive"
+author = "Catherine Zhou"
+description = "Catherine's Archive Closet"
+profilePicture = "images/profile.jpeg"
+singleDateFormat = "1/2/2006"
+indexDateFormat = "1/2/2006"
+listDateFormat = "1/2/2006"
+readMore = true
+
+reversepagetitle = true # When set to 'true', the Window Title will be reversed to 'Title | Author' instead of the default 'Author | Title'
+
+
+## Math settings
+[params.math]
+enable = true  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "http://www.linkedin.com/in/zhilinzhou/"
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:z374zhou@uwaterloo.ca"
+
+[[params.socialIcons]]
+icon = "fa-brands fa-github"
+title = "github"
+url = "http://github.com/Cathrineee"
+
+
+# Menu
+[menu]
+
+[[menu.main]]
+name = "Home"
+identifier = "home"
+weight = 100
+
+[[menu.main]]
+name = "About"
+identifier = "about"
+weight = 200
+url = "/about/"
+
+[[menu.main]]
+name = "Notes"
+weight = 300
+identifier = "notes"
+
+[[menu.main]]
+name = "STAT 230"
+weight = 310
+identifier = "stat230"
+url = "/stat230/"
+parent = "notes"
+
+[[menu.main]]
+name = "CO 250"
+weight = 320
+identifier = "co250"
+url = "/co250/"
+parent = "notes"
+
+[[menu.main]]
+name = "PSYCH 211"
+weight = 330
+identifier = "psych211"
+url = "/psych211/"
+parent = "notes"
+
+[[menu.main]]
+name = "STAT 331"
+weight = 340
+identifier = "stat331"
+url = "/stat331/"
+parent = "notes"
+
+[[menu.main]]
+name = "Projects"
+weight = 400
+identifier = "projects"
+url = "/projects/"
+
+[[menu.main]]
+name = "Resume"
+weight = 500
+identifier = "resume"
+url = "/resume/"
+
+
+
+
