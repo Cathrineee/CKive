@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        Settlers of Catan Game Development |
+
+      
+      Catherine Zhou
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Catherine Zhou" />
+  <meta
+    name="description"
+    content="
+      Catherine&#39;s Archive Closet
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/~z374zhou/scss/main.min.a12c1551e3e2460af4fc86c5c36fa92407e2dd7b980a8cf5a573fd76666cc933.css"
+      integrity="sha256-oSwVUePiRgr0/IbFw2&#43;pJAfi3XuYCoz1pXP9dmZsyTM="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/~z374zhou/css/markupHighlight.min.793b323d7f2d9fbfd0b93f4d593fb5ad77b918716ed33eddea403fa87f770403.css"
+    integrity="sha256-eTsyPX8tn7/QuT9NWT&#43;1rXe5GHFu0z7d6kA/qH93BAM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/~z374zhou/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/~z374zhou/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/~z374zhou/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/~z374zhou/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/~z374zhou/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/~z374zhou/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/~z374zhou/favicon-16x16.png" />
+
+  <link rel="canonical" href="http://student.cs.uwaterloo.ca/~z374zhou/catan/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/~z374zhou/js/anatole-header.min.5c846cefa5ed21cceee981c70901aaf21b17b4e0b05bd777af840780918abea9.js"
+    integrity="sha256-XIRs76XtIczu6YHHCQGq8hsXtOCwW9d3r4QHgJGKvqk="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/~z374zhou/js/anatole-theme-switcher.min.245da778410d349aba672975fe9ff04e24e608155cc9102b5c1c70554c1539c0.js"
+      integrity="sha256-JF2neEENNJq6Zyl1/p/wTiTmCBVcyRArXBxwVUwVOcA="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Settlers of Catan Game Development"/>
+<meta name="twitter:description" content="A simple version of Settlers of Catan Game with a computer AI."/>
+
+
+
+  
+  <meta property="og:title" content="Settlers of Catan Game Development" />
+<meta property="og:description" content="A simple version of Settlers of Catan Game with a computer AI." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://student.cs.uwaterloo.ca/~z374zhou/catan/" />
+<meta property="article:published_time" content="2022-04-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-24T00:00:00+00:00" /><meta property="og:site_name" content="CKive" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "",
+        "name": "Settlers of Catan Game Development",
+        "headline": "Settlers of Catan Game Development",
+        "alternativeHeadline": "",
+        "description": "
+      
+        A simple version of Settlers of Catan Game with a computer AI.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/student.cs.uwaterloo.ca\/~z374zhou\/catan\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Catherine Zhou"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Catherine Zhou"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Catherine Zhou"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Catherine Zhou"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-04-24T00:00:00.00Z",
+        "datePublished": "2022-04-24T00:00:00.00Z",
+        "dateModified": "2022-04-24T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Catherine Zhou",
+            "url": "http://student.cs.uwaterloo.ca/~z374zhou/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/student.cs.uwaterloo.ca\/~z374zhou\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "http:\/\/student.cs.uwaterloo.ca\/~z374zhou\/catan\/",
+        "wordCount" : "5149",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/~z374zhou/images/profile.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/~z374zhou">CKive</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>Catherine's Archive Closet</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a href="http://www.linkedin.com/in/zhilinzhou/" rel="me" aria-label="Linkedin" title="Linkedin">
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="mailto:z374zhou@uwaterloo.ca" rel="me" aria-label="e-mail" title="e-mail">
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a href="http://github.com/Cathrineee" rel="me" aria-label="github" title="github">
+            <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Catherine Zhou
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/~z374zhou/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/~z374zhou/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/~z374zhou/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="menuoptionpicker" hidden />
+              <label
+                
+                  
+                    class="optionswitch__label"
+
+                  
+
+
+                
+                  
+                    class="optionswitch__label"
+
+                  
+
+
+                
+                  
+                    class="optionswitch__label"
+
+                  
+
+
+                
+                  
+                    class="optionswitch__label"
+
+                  
+
+
+                
+                for="menuoptionpicker"
+                >Notes <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/~z374zhou/stat230/"
+                      
+                      title=""
+                      >STAT 230</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/~z374zhou/co250-note.pdf"
+                      
+                      title=""
+                      >CO 250</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/~z374zhou/psych211-note.html"
+                      
+                      title=""
+                      >PSYCH 211</a
+                    >
+                  </li>
+
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/~z374zhou/stat331/"
+                      
+                      title=""
+                      >STAT 331</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <div class="optionswitch">
+              <input class="optionswitch__picker" type="checkbox" id="menuoptionpicker" hidden />
+              <label
+                
+                  
+                    class="optionswitch__label nav__link--active"
+
+                  
+
+
+                
+                for="menuoptionpicker"
+                >Projects <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></label>
+              <div class="optionswitch__triangle"></div>
+              <ul class="optionswitch__list">
+                
+                  <li class="optionswitch__list-item">
+                    <a
+                      href="/~z374zhou/catan/"
+                      
+                      title=""
+                      >Settlers of Catan</a
+                    >
+                  </li>
+
+                
+              </ul>
+            </div>
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/~z374zhou/resume.pdf"
+              
+              title=""
+              >Resume</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/~z374zhou/bake/"
+              
+              title=""
+              >Bakery</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Settlers of Catan Game Development</h1>
+      <p>A simple version of Settlers of Catan Game with a computer AI.</p>
+<p>Developed by <a href="https://www.linkedin.com/in/zhilinzhou/">Catherine</a> and <a href="https://www.linkedin.com/in/meredith-cheng/">Meredith</a></p>
+<p>See <a href="demo.pdf">demo</a> about how to run the program. See <a href="https://github.com/Cathrineee/CatanGame">Github</a> for more details.</p>
+<h2 id="overview">Overview</h2>
+<p>The overall structure of this program splits into three sections: Model, View, and Control. We decide to implement the <strong>MVC</strong> design pattern to organize our classes and their relationships to make the program with higher cohesion inside the classes and lower coupling between classes.</p>
+<h3 id="model">Model</h3>
+<ul>
+<li>
+<p>The model section of the program is centered at <code>Board</code>, which contains all the information on the game board and implements most of the actions during the game. It contains vectors of <code>shared_ptr</code> to the <code>Tile</code> objects, <code>Edge</code> objects, <code>Vertex</code> objects, and <code>Builder</code> objects. It has a composition relationship with all these classes. To minimize coupling and maximize cohesion, <code>Board</code> is the only class that holds the pointer to these objects, while other classes hold the index of these objects inside the vector.</p>
+<p>For example, when the player rolls a dice, <code>gainResources(int roll)</code> is called. It goes to the <code>Tile</code>(s) that matches the number of the dice and finds out if any player has build residences on that Tile by getting the vector of the indices of these <code>Vertex</code>. The <code>Board</code> then uses its private <code>Vertex</code> vector to access these <code>Vertex</code> objects to see if it has residences or not.</p>
+</li>
+<li>
+<p><code>Builder</code> class holds all the information of a player, including the number of resources, the building points, and the vector of <code>Residence</code>(s). It has a composition relationship with the <code>Residence</code> class.</p>
+</li>
+<li>
+<p><code>Tile</code> class holds all the information of a tile on the game board, such as its number, value, the resource(s) it represents, and the vertices and edges it associates with. As mentioned above, the vector of <code>Vertex</code> and <code>Edge</code> contains the indicies instead of the object/pointer itself, to enhance programming design.</p>
+</li>
+<li>
+<p><code>Edge</code> and <code>Vertex</code> hold information of the edges and verticies of each tile.</p>
+</li>
+<li>
+<p><code>Residence</code> class obtains information of each type of residence the player can build. The <code>UpdateResidence()</code> and <code>ImproveType()</code> function updates the Residence type and the building point of the current object.</p>
+</li>
+</ul>
+<h3 id="view">View</h3>
+<p>We use an abstract <code>Display</code> class with the subclass <code>TextDisplay</code> to implement features of the View section. <code>Display</code> contains <code>printBoard()</code>, <code>printResidences(int builder)</code>, and <code>printBuilders()</code>. When <code>Board</code> needs to print these information, it calls the corresponding function in the <code>Display</code> class to output the messages. We use the <strong>Template Method</strong> here, and we will discuss the details of this implementation in the <a href="#Design">Design</a> section and <a href="#resilience-to-change">Resilience to Change</a> section later.</p>
+<p>The <code>textDisplay</code> class holds the layout of the game board. We use the <code>rectangular_layout</code> text file as the template and add specific information to the template when the game starts. The <code>Board</code> gives the <code>Information</code> object it receives to initialize <code>Display</code>, and <code>Display</code> uses the informaiton stored to fill in the board.</p>
+<p>We use the <strong>Observer</strong> design pattern to implement the feautres in <code>Display</code>. Everytime <code>Board</code> makes a change to the state of <code>Builders</code>, <code>Vertices</code>, or <code>Edges</code>, it will <em>notify</em> <code>Display</code> by calling the corresponding functions. <code>Display</code> will then change the information it stores and the corresponding coordinates on the board. The <code>Board</code> can also potentially choose to <em>attach</em> or <em>detach</em> to different display layout.</p>
+<h3 id="control">Control</h3>
+<p>The <code>Control</code> section consists of two parts: the <code>main</code> function and the <code>Controller</code> class.</p>
+<ul>
+<li>
+<p><code>Main</code> contains a <code>Controller</code> object. It takes in input from the players and calls the corresponding <code>Controller</code> functions to implement the actions. It uses several exception structs to implement exception safe, making sure that the program will not crash or goes into error even if the user does not follow a legal sequence of actions.
+<code>Controller</code> goes between the <code>main</code> function and the <code>Board</code> class. It contains a pointer to the current <code>Board</code> and calls the corresponding <code>Board</code> functions when the <code>main</code> function calls its functions.</p>
+</li>
+<li>
+<p>We made an <code>Information</code> class to contain all the information the board needed at the beginning of the game. The <code>Information</code> class has a composition relationship with the <code>BuilderData</code> class, which contains the information of each builder from the loaded data. It takes in a <code>string</code> (from the given file) and translates them into the way that <code>Board</code> could read later.</p>
+</li>
+<li>
+<p>We use <strong>Template Method</strong> to implement the features that the player gets to choose what type of board they want during run-time. We have an <code>Level</code> class and three subclasses, <code>RandomLevel</code>, <code>PreviousLevel</code>, and <code>CustomizedLevel</code>. <code>PreviousLevel</code> and <code>CustomizedLevel</code> both reads the file given by the player stores the information in the <code>Information</code> object. <code>RandomLevel</code> uses a <code>default_random_engine</code> to generate random sequences of the tiles and their values based on the setted distribution. The <code>Level</code> class uses the function <code>getBoard()</code> to return a <code>shared_ptr</code> to the <code>Board</code> object it constructs using the completed <code>Information</code> object.</p>
+</li>
+</ul>
+<h2 id="design">Design</h2>
+<ul>
+<li>
+<p>At the start of the program, the user need to choose whether they want a random board or a customized board layout by giving the command-line instructions. We implement this feature by using the <strong>Template method</strong> on <code>Level</code>.</p>
+<p><code>Level</code> class contains a <code>shared_ptr</code> to an <code>Information</code> object. It uses the <code>getBoard()</code> function to generate a <code>shared_ptr</code> of <code>Board</code> by passing <code>info</code> to the <code>Board</code>'s constructor. <code>Level</code> has three subclasses: <code>RandomLevel</code>, <code>PreviousLevel</code>, and <code>CustomizedLevel</code>.</p>
+<p>When the user gives the command-line instructions on what kind of board to create, <code>main</code> will pass these instructions to <code>Controller</code> by giving its constructor the seed and input files. The <code>Controller</code> will decide which <code>Level</code> object to create at runtime. Since for whatever type of <code>Board</code> to create, they all need an <code>Information</code> object and pass it to the constructor. Thus, we decide to use the <strong>Template Method</strong>, such that he three <code>Level</code> subclasses have different implementation on <code>updateInfo()</code>, ad the <code>Level</code> class has a public <code>getBoard()</code> function. Then at run-time, <code>Controller</code> will get the corresponding board by calling <code>getBoard()</code>.</p>
+</li>
+<li>
+<p>At the beginning of the turn, the player chooses to roll a loaded dice or a fair dice. We implement this feature by using the <strong>Factory Method</strong>, that we have an abstract <code>Dice</code> class and two subclasses (<code>LoadedDice</code> and <code>FairDice</code>).</p>
+<p>We will determine which object to create at run-time. The <code>Controller</code> class passes the <code>seed</code> parameter to <code>FairDice</code> and the player-chosen number to <code>LoadedDice</code>. Both classes will then return the rolled number by the overriden <code>rollDice()</code> function, either using a <code>default_random_engine</code> to shuffle the dice, or directly return the chosen number. To make sure that the rolled number is random while using the <code>FairDice</code>, we shuffle the list of numbers (1 to 6) two times, and take the first element on the shuffled list as the index of the number rolled in the shuffled list. We then add the two results we have to return.</p>
+</li>
+<li>
+<p>During the game, each builder will make changes to their state by rolling a dice (gaining resources), building a road, or building a residence, etc. We want to udpate these changes immediately to the <code>Board</code> as well as the <code>Display</code>, since the player can choose to print the board or player status right after they nake these changes. Therefore, we use the <strong>Observer</strong> design pattern here to implement this feature. Everytime the builder makes a change, the <code>Controller</code> calls the corresponding function in <code>Board</code> to conduct this action. <code>Board</code> will then notify the <code>Display</code> object it attached to at the beginning of the game to make the corresponding updates. Subsequently, when the player wants to print the board, <code>Display</code> can immediately print the up-to-date information.</p>
+</li>
+<li>
+<p>During the game, each builder can choose to build a basement or a road, which definitely changes their state on the resources they hold, as well as the state of the board. We adopt the <strong>Observer</strong> design pattern here to implement this feature. We contain mappings from verticies to their adjacent vertices and edges in <code>Vertex</code> and <code>Edge</code>. Everytime the builder build a road or makes a change to their residences, <code>Board</code> will <em>notify</em> the adjacent verticies and edges of the corresponding vertex or edge to make some changes to their state. We decide to add the builder&rsquo;s name to these adjacent verticies or edges to show that such builder has built a basement or road. Doing so helps us keep track on the current state of each vertex and edge, so that when the builder want to build a road or another basement later, we can check their validity using the most up-to-date information.</p>
+</li>
+<li>
+<p>We noticed that this program requires a lot of interaction with the user, by taking in input from the user, conduct actions, and output the corresponding messages to the user. The entire process matches the <strong>MVC</strong> design pattern, and thus, we decide to adopt this design pattern to implement the user-interaction features of this game.</p>
+<p>We separate our classes into three parts: <code>Model</code>, <code>View</code>, and <code>Control</code>. The <code>Control</code> section includes classes that takes in user input, translates it into the format that is understandable by other functions, and calls the corresponding functions in the <code>Model</code> section. It acts like the deliver between the user and the program itself. The <code>Model</code> section includes classes that actually conduct the instructions and calculates the correct output. After the calculations are done, it delivers the raw result to the <code>View</code> by updating the output information stored in <code>View</code>. The <code>View</code> section then prints the message or shows the display to the user, letting them know how their instructions are fulfilled. We have the follwoing example to illustrate how we use this design pattern to enhance our program:</p>
+<p>One of the features of this game is Geese. When the dice is rolled to a 7, <code>Control</code> calls the <code>Geese()</code> function in <code>Model</code>. <code>Model</code> first finds a list of builders that have at least 10 resources on hand and give this list to <code>View</code> to let these players know how many of their resources have been lost to the Geese. <code>View</code> then asks the current builder to choose a new position to place the Geese. <code>Control</code> takes the chosen vertex and pass it to <code>Model</code> by calling the <code>UpdateGeese(new location)</code> function. <code>Model</code> searches for the builders that have built residences on such tile and delivers the list of such builders to <code>View</code>. If there are no builders to steal, then <code>View</code> will just output the message, and <code>Control</code> will move on to the next instruction. If the list is not empty, then <code>View</code> asks the player to choose one builder from the printed list. <code>Control</code> gets the name from the player and passes it to <code>Model</code>. <code>Model</code> generate a randon resource from the chosen builder and gives the resource to the current builder. It updates <code>View</code> with this change on state, and <code>View</code> then prints the message to notify the builders.</p>
+</li>
+</ul>
+<h2 id="resilience-to-change">Resilience to Change</h2>
+<ul>
+<li>
+<p>The player might want to switch to a different display, such as a graphic display, in the middle of the game (at run-time). Considering this potential change, we use the <strong>Template Method</strong> on the <code>Display</code> class.</p>
+<p>We have a <code>Display</code> class, which contains the current up-to-date information about the builders, vertices, and edges, including mapping from builder to their number of resources and residences, mapping from verticies to their position in the board layout, etc. The information can be accesses by all its subclasses, so that they could construct their layout and update the information when get notified by the <code>Board</code>.
+<code>Display</code> class contains public functions to print error messages or output results from the <code>Board</code>. It also contains pure virtual functions for updates and printing. We choose to leave them as pure virtual functions, since the different subclasses will have different implementation on how to update the information as well as printing the layouts.</p>
+<p>Inheriting <code>Display</code>, the <code>TextDisplay</code> class obtains a vector of <em>strings</em> (we use vector of chars here, so that it will be easy for us to access and update the layout). It implements the virtual methods from <code>Display</code>. Since the <code>Board</code> only contains a <code>Display</code> object and only decide which specific display type it is when constructing this object at the beginning, both the non-virtual methods and the virtual methods will work at run-time, and the virtual methods will have different display output when using differerent display type.</p>
+<p>We originally plan to add another display type such as changing the board layout, but due to the time constraint, we didn&rsquo;t implement such feature. However, we still keep the <strong>Template Method</strong> design pattern, just so we can always implement such features with the smallest amount of change to our program &ndash; we only need to add another subclass to the <code>Display</code> class and change the implementation of the virtual methods in the new subclass.</p>
+</li>
+<li>
+<p>The players might want to change the settings of the game when restarting the game at the end. For exmaple, they originally set the game to a previous game status, and after one player wins, they decide to use another board layout or game status instead of the original one. To implement this potential change, we use the <strong>Template Method</strong> on setting the board.</p>
+<p>At the beginning of the game, when the player gives the command-line instructions, we store the information we get from the file in the <code>Information</code> and <code>BuilderData</code> class. We have a <code>Level</code> class and three subclasses to separate the cases when the command-line is &lsquo;random&rsquo;, &lsquo;board&rsquo; or &lsquo;load&rsquo;. <code>Level</code> class has a public <code>getBoard()</code> method. Calling which will return a <code>shard_ptr</code> to the <code>Board</code> with the stored <code>Information</code>. It contains a private virtual <code>updateInfo()</code> method, and the three subclasses all have different implementation on this method. When <code>Controller</code> calls <code>getBoard()</code>, the <code>Board</code> it returns depends on the type of <code>Level</code> object <code>Controller</code> creates based on the user input.</p>
+<p><code>Controller</code> holds the <code>Level</code> object it originally creates, so when the game finishes and restarts, it can use the public <code>restart()</code> method in <code>Level</code>, which returns a new <code>Board</code> pointer with the same <code>Information</code> as the beginning. Thus, if we want to implement this change, we only need to change the <code>restart()</code> method in <code>Level</code> and the <code>main</code> function at the end, which will ask the players to input a new command-line instruction. <code>Controller</code> will decide the new type of <code>Level</code> object it needs to create and pass the corresponding information to this new object. Then, calling the new <code>getBoard()</code>, it shall return the udpated <code>Board</code> with the new settings the players just choose.</p>
+</li>
+<li>
+<p>We add a new feature to the game called <code>Bank</code>. The detail of this feature will be explianed in the <a href="#extra-features">Extra Features</a> section. We did not change our program a lot when adding this new feature because we adopted the <strong>Observer</strong> design pattern in <code>Model</code>.</p>
+<p>When the builder want to mortage his/her residence to the bank, <code>Board</code> will notify the current <code>Builder</code>, and <code>Builder</code> will detach the corresponding <code>Residence</code> at the given vertex. The detach function will first delete this <code>Residence</code> from the vector of residences stored in the <code>Builder</code>. It will then notify the vertex on which the <code>Residence</code> locates and the adjacent verticies and edges to make changes to their states.</p>
+<p>Adopting the <strong>Observer</strong> design pattern divides the work of implementing each instruction into different parts, which will be done by different classes. This maximizes the cohesion within a class and minimizes the coupling of different classes.</p>
+</li>
+<li>
+<p>We add another feature to the game such that the player can choose the number of builders in the game by inputing <code>-players x</code>, where $x$ is the number of players. We make minimal changes to our program since we implement the <strong>MVC</strong> design pattern. Since we separate our classes and functions into three sections, making change to the number of players barely changes the <code>Model</code> section. We only make minimal change to <code>main</code>, <code>controller</code>, and <code>Display</code> to add player size as a private member and change the vectors of players into the correct size.</p>
+<p>The reason why we almost do not need to change the <code>Model</code> section is that everytime <code>Controller</code> calls a <code>Board</code> function, it passes the index of the current player to <code>Board</code>, such that the <code>Board</code> always uses the correct index of player to conduct the following actions, and will not get an invalid player index. <code>Controller</code> keeps track of the number of players and the index of the current player to make sure that the index number it gives to <code>Board</code> is valid. The only thing we need to change in <code>Model</code> is to add player size as a private member, so that when <code>next()</code> is called, it can change <code>curTurn</code> to the correct player. We did not give much changes to <code>Display</code> either. We only add player size as a private member and change the vectors&rsquo; size to match the player&rsquo;s size.</p>
+</li>
+</ul>
+<h2 id="qa">Q&amp;A</h2>
+<ul>
+<li>
+<p>You have to implement the ability to choose between randomly setting up the resources of the board and reading the resources used from a file at runtime. What design pattern could you use to implement this feature? Did you use this design pattern? Why or why not?</p>
+<p>We will use the <strong>Template Method</strong> design pattern to implement this feature. We have three ways to create the board: random, using previous game status, or using a board layout. Since the <code>board</code> class takes in an <code>information</code> object, these three types differ only when preparing the <code>information</code> object. They all have the same last step &ndash; passing the <code>information</code> to the <code>board</code>. Therefore, we could use the **Template Method} here to help us implement this feature.</p>
+</li>
+<li>
+<p>You must be able to switch between loaded and fair dice at run-time. What design pattern could you use to implement this feature? Did you use this design pattern? Why or why not?</p>
+<p>We could use the <strong>Factory Method</strong> design pattern to immplement this feature. We will have a abstract <code>dice</code> class, which contains a virtual <code>roll</code> function. We will have <code>load_dice</code> and <code>fair_dice</code> inheriting the virtual method and override the function by their methods.</p>
+<p><em>Note</em>: at DD1, we stated to use <strong>Template Method</strong> here. We decide that <strong>Factory Method</strong> should be more accurate to implement this feature, since using a fair dice or a loaded dice does not have a similar algorithm. If we use the fair dice, we have a <code>defualt_random_engine</code> to take a random roll, and if we use the loaded dice, we just output the number the player just chose. Therefore, we just need an abstract <code>Dice</code> class to declare in <code>Controller</code> and choose which object to create at run-time, which uses the <strong>Factory Method</strong>.</p>
+</li>
+<li>
+<p>We have defined the game of Constructor to have a specific board layout and size. Suppose we wanted to have different game modes (e.g. rectangular tiles, a graphical display, different sized board for a different numbers of players). What design pattern would you consider using for all of these ideas?</p>
+<p>We will use the <strong>Template Method</strong> design pattern to implement this feature. We have discussed to add graph display to this game as the add-on feature. We will have a abstract <code>display</code> class, which includes the general functions for view. We will also have <code>textDisplay</code> and <code>graphicDisplay</code> classes to inherit <code>display</code> and decide to use which object at runtime.</p>
+<p><em>Note</em>: Orignally, we plan to use the <strong>Factory Method</strong>, but later we found that <code>Board</code> class needs to use <code>Display</code> to output error messages or the result of an instruction . Thus, we add some public functions to <code>Display</code> to output messages, since with different display type, these functions will be the same. For the functions that need to update the baord layout, we put them as virtual funtions so that with different tyep of <code>Display</code> objects, they will have different implementations on those.</p>
+</li>
+<li>
+<p>At the moment, all Constructor players are humans. However, it would be nice to be able to allow a human player to quit and be replaced by a computer player. If we wanted to ensure that all player types alway followed a legal sequence of actions during their turn, what design pattern would you use? Explain your choice.</p>
+<p>We will use the <strong>MVC</strong> design pattern to implement this feature. We will have a <code>controller</code> section, which reads input from the user and decide whether or not the input is legal before passing it to the <code>model</code>.</p>
+</li>
+<li>
+<p>What design pattern would you use to allow the dynamic change of computer players, so that your game could support computer players that used different strategies, and were progressively more advanced/smarter/aggressive?</p>
+<p>We can use the <strong>Decorator</strong> design pattern to adopt more advanced and smarter strategies from computer players. We can add more functionality to our program by using the Decorator during runtime.</p>
+</li>
+<li>
+<p>Suppose we wanted to add a feature to change the tiles’ production once the game has begun. For example, being able to improve a tile so that multiple types of resources can be obtained from the tile, or reduce the quantity of resources produced by the tile over time. What design pattern(s) could you use to facilitate this ability?</p>
+<p>We will use the <strong>Decorator</strong> and <strong>Observer</strong> design patterns to implement this feature. Using the decorator, we can add functionality and features to our program at runtime and withdraw it at any time. Using the observer, once one class has changed its feature/state, we can notify all the other classes to adopt this change using the observers.</p>
+</li>
+<li>
+<p>Did you use any exceptions in your project? If so, where did you use them and why? If not, give an example of a place that it would make sense to use exceptions in your project and explain why you didn’t use them.</p>
+<p>We will use exceptions in our project, such as throwing <code>InvalidCommand</code> when the player inputs an invalid command, or <code>NoPermission</code> when the player cannot build house at a certain vertex. Using this strategy could make our program exception safe and will not crash on these illegal actions.</p>
+<p><em>Note</em>: We add a <code>Exception</code> class to our program to store all the exceptions we need for this program. The class includes <code>alreadySpecified</code>, <code>unableOpen</code>, <code>invalidArg</code>, <code>invalidCommand</code>, and <code>EndOfGame</code>.</p>
+</li>
+</ul>
+<h2 id="extra-features">Extra Features</h2>
+<p>We have implemented several extra features to this project. Here are the details of their features and descriptions.</p>
+<h3 id="stl-smart-pointers">STL smart pointers</h3>
+<p>In this project, we choose to use STL smart pointers instead of normal pointers to implement RAII. We designed our classes so that the lifetime of the objects in the classes are bound to the corresponding class. For example, in our <code>Board</code> classes, we have a <code>shared_ptr</code> of a <code>Display</code> object. Since the <code>shared_ptr</code> will automatically clean up its allocation in heap when the object is gone out of scope (reference count is reduced to 0), which in this case, is when the <code>Board</code> class goes out of scope. Similarly, the <code>Controller</code> class obtains a smart pointer to the <code>Board</code>. When we restart the game, we replace the old board with a new board containing brand-new information. The <code>shared_ptr</code> to the old board will then go out of scope, since <code>Controller</code> is the only class holding the reference to it. Then the replacement will automatically clean up the allocation of the old <code>Board</code> as well as the <code>Display</code> object, since the lifetime of <code>Display</code> is bound to <code>Board</code>, and create new allocation for the new <code>Board</code> and <code>Display</code>. The entire process can be done by the STL smart pointers, without us explicitly <em>delete</em> the objects. Using the smart pointers has significantly helped us to keep our codes clean and designed our classes to implement RAII.</p>
+<h3 id="bank">Bank</h3>
+<p>We added a new functionality to this game: the player can mortgage one of their residences to the bank to get resources. Just like the mortgage in real life, we set a different price for each type of residences, and we print the price table to the display for the player to decide if they want to continue with the mortgage or not. The price of each residence is half of their price before. For &lsquo;House&rsquo; and &lsquo;Tower&rsquo;, we add the number of resources one builder need to pay from &lsquo;Basement&rsquo; as their price.</p>
+<p>The description of &lsquo;bank&rsquo; in &lsquo;help&rsquo; is:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">~ bank : attempts to apply for a mortgage using an existing residence. 
+Further instructions will be given when the command is chosen.
+</code></pre></div><p>During the game, when the player type <code>bank</code>, they decide to initiate a mortgage with the bank. Then the program will print the following price table to the player:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Here is the rules for applying a mortgage. 
+          Original price                                What you will get 
+Basement: 1 BRICK, 1 ENERGY, 1 GLASS, 0 HEAT, 1 WIFI =&gt; 1 BRICK, 1 ENERGY, 0 GLASS, 0 HEAT, 0 WIFI 
+House   : 0 BRICK, 0 ENERGY, 2 GLASS, 3 HEAT, 0 WIFI =&gt; 1 BRICK, 1 ENERGY, 1 GLASS, 1 HEAT, 0 WIFI 
+Tower   : 3 BRICK, 2 ENERGY, 2 GLASS, 2 HEAT, 1 WIFI =&gt; 2 BRICK, 2 ENERGY, 2 GLASS, 2 HEAT, 1 WIFI 
+Enter the vertex if you want to continue, or else &#39;quit&#39;.
+</code></pre></div><p>Then, the builder will decide if they want to continue with the mortgage or not. They can choose to quit the process if they do not like the price the bank gives, or give the number of the vertex they want. <code>Board</code> will check if the input vertex is valid or not, and if it is valid, it will update the builder&rsquo;s status and <code>Display</code>. If the mortgage is successful, the program will print</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">You have successfully mortgaged your &lt;residence&gt; at &lt;vertex&gt;!
+</code></pre></div><p>Otherwise, it will print the error messages to <code>cerr</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">You cannot apply for the mortgage at &lt;vertex&gt;.
+</code></pre></div><h3 id="market">Market</h3>
+<p>Another new feature we add to this game is market. The builder can choose to use four of their resources to exchange for one resources from the market. How it works is very similar to &lsquo;trade&rsquo;, but one main difference is that, the other builder in &lsquo;trade&rsquo; can decline this offer, while the market will always accept the offer, except that the builder has to pay more to trade in the market.</p>
+<p>The description of &lsquo;market&rsquo; in help is</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">~ market &lt;give&gt; &lt;take&gt; : attempts to trade with the market, giving four resources of type 
+&lt;give&gt; and receiving one resource of type &lt;take&gt;.
+</code></pre></div><p>When the builder input a resource for <code>give</code> and <code>take</code>, the <code>Board</code> will check the validity of <code>give</code> &ndash; whether or not the builder has four <code>give</code> resources or not. If the builder does not qualify for such exchange, <code>Display</code> will output:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">You do not have enough resources to complete the exchange.
+</code></pre></div><p>Otherwise, the exchange is successful, and <code>Display</code> will output the number and the type of resources the builder has just gained.</p>
+<h3 id="number-of-players">Number of Players</h3>
+<p>In this project, we add another command to the command-line instructions, such that the player gets to choose the number of player this game will have. They will add <code>-players x</code> to the command-line at any position, and $x$ will be the number of players in this game. $x$ has to be between 2 to 4, and the names of the players are still in the order of <code>Blue</code>, <code>Red</code>, <code>Orange</code>, <code>Yellow</code>, while for players less than 4, we will take the first $x$ players.</p>
+<p>For example, if the player have <code>-player 3</code> in their command line, then the game will have three players: <code>Blue</code>, <code>Red</code>, <code>Orange</code>. The game will proceed in the same way as before, except that each turn will only contain these three players without <code>Yellow</code>.</p>
+<p>The command-line has the same rule as before, such that the player cannot input <code>-player</code> twice.</p>
+<h3 id="computer-players">Computer Players</h3>
+<p>We add some computer players to this game to make it more fun. The player gets to add <code>-computer_player x</code> to the command-line, indicating that they want to include $x$ computer players in this game. $x$ has to be between 1 and $p-1$, where $p$ is the number of players in this game with default set to be 4. There has to be at least one human player in the game. We keep the rules for the command line, such that the player cannot give <code>-computer_player</code> twice or input an invalid number of computer players.</p>
+<p>The computer player will only do four things in this game: choosing a valid vertex when building basement at the beginning of the game, rolling a fair dice (not 7), giving <code>next</code> command as soon as it is his turn, and chooses <code>no</code> when a human player asks to trade with it. Since the computer player has access to all the vertex and edge status, it will search for the smallest possible vertex to build basement on. Since the computer player is &ldquo;smart&rdquo;, it will not choose an invalid address and makes an error. However, it is not so &ldquo;smart&rdquo; in the way that it will not do anything in its turn, such as building another basement or road. It is not so friendly to the human players, such that it does not want to trade with the human players.</p>
+<h2 id="final-reflection">Final Reflection</h2>
+<ul>
+<li>
+<p>What lessons did this project teach you about developing software in teams? If you worked alone, what lessons did you learn about writing large programs?</p>
+<p>From this project, we learned the importance of having a good communication between team members and how having a team helps to divide a large program into smaller pieces.</p>
+<p>We have a clear division of the work. Since we decide to adopt the <strong>MVC</strong> design pattern, we decide to have Meredith finish the <code>Model</code> part, and Catherine to finish the <code>Controller</code> and <code>Display</code> sections. We have meetings regularly to discuss the progress on finishing our parts, and made a Google document to record the changes we made to the original structure of the program while developing our own parts. We found that having different people writing different parts enhances the implementation of object-oriented programming pattern, since we will have high cohesion on our classes and little coupling between different classes. Using the Google document as well as a Discord group, we made our teamwork efficient and effective.</p>
+</li>
+<li>
+<p>What would you have done differently if you had the chance to start over?</p>
+<p>As you can see, our original UML diagram that we planned before we actually write our programs looks very different than our final UML diagrams. We did not think through the entire project and how each sections connect with each other, so we made many modifications to the internal structure within each sections while developing the program. For instance, Catherine did not plan the implementation of <code>Display</code> correctly at the beginning, such that the <code>Display</code> class and <code>Board</code> class each has a <code>shared_ptr</code> pointing to each other, which is obviously a bad practice and is not allowed for <code>shared_ptr</code>s. Therefore, Catherine has to rewrite her entire <code>Display</code> class after finishing most of it, and changing it to the correct implementation. Hence, if we had the chance to start over, we will plan the structure of the project more thoroughly and have a deeper understanding of the organization of the program before we start coding, so that we can be more efficient during the development of the game.</p>
+</li>
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Catherine Zhou
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/~z374zhou/js/medium-zoom.min.7d3bf3472b73d9ba107b3de37d0df8fa736593a3c6638c95eaed42006bfc0193.js"
+    integrity="sha256-fTvzRytz2boQez3jfQ34&#43;nNlk6PGY4yV6u1CAGv8AZM="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CKive</title>
+    <link>http://student.cs.uwaterloo.ca/~z374zhou/</link>
+    <description>Recent content on CKive</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020-{{ YEAR }}</copyright>
+    <lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://student.cs.uwaterloo.ca/~z374zhou/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Items I&#39;ve Made</title>
+      <link>http://student.cs.uwaterloo.ca/~z374zhou/bake/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://student.cs.uwaterloo.ca/~z374zhou/bake/</guid>
+      
+        <description>家常菜  红烧排骨  红烧肉  醋溜白菜   甜点   巧克力慕斯   提拉米苏   玛格丽特   轻乳酪蛋糕   抹茶渐变慕斯   红糖芋圆   </description>
+      
+    </item>
+    
+    <item>
+      <title>Settlers of Catan Game Development</title>
+      <link>http://student.cs.uwaterloo.ca/~z374zhou/catan/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://student.cs.uwaterloo.ca/~z374zhou/catan/</guid>
+      
+        <description>A simple version of Settlers of Catan Game with a computer AI.</description>
+      
+    </item>
+    
+    <item>
+      <title>STAT 230</title>
+      <link>http://student.cs.uwaterloo.ca/~z374zhou/stat230/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://student.cs.uwaterloo.ca/~z374zhou/stat230/</guid>
+      
+        <description>Notes: STAT 230 Notes
+Midterm Review: STAT 230 Midterm Review</description>
+      
+    </item>
+    
+    <item>
+      <title>STAT 331</title>
+      <link>http://student.cs.uwaterloo.ca/~z374zhou/stat331/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://student.cs.uwaterloo.ca/~z374zhou/stat331/</guid>
+      
+        <description>Notes: STAT 331 Notes
+Final Review: STAT 331 Review</description>
+      
+    </item>
+    
+    <item>
+      <title>This is Catherine Zhou</title>
+      <link>http://student.cs.uwaterloo.ca/~z374zhou/about/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://student.cs.uwaterloo.ca/~z374zhou/about/</guid>
+      
+        <description>I am a 3rd year CS/Data Science student, minor in Combinatorics &amp;amp; Optimization and Psychology, at the University of Waterloo.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
