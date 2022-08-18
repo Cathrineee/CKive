@@ -112,14 +112,26 @@ url = "/catan/"
 parent = "projects"
 
 [[menu.main]]
-name = "Resume"
+name = "Tutoring"
 weight = 500
+identifier = "tutor"
+
+[[menu.main]]
+name = "UW-CS 115"
+weight = 510
+identifier = "uw-cs115"
+url = "/uw-cs115/"
+parent = "tutor"
+
+[[menu.main]]
+name = "Resume"
+weight = 700
 identifier = "resume"
 url = "/resume.pdf"
 
 [[menu.main]]
 name = "Bakery"
-weight = 600
+weight = 800
 identifier = "bake"
 url = "/bake/"
 
