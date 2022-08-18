@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020-{{ YEAR }}</copyright>
-    <lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://student.cs.uwaterloo.ca/~z374zhou/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://student.cs.uwaterloo.ca/~z374zhou/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UW - CS 115</title>
+      <link>http://student.cs.uwaterloo.ca/~z374zhou/uw-cs115/</link>
+      <pubDate>Thu, 18 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://student.cs.uwaterloo.ca/~z374zhou/uw-cs115/</guid>
+      
+        <description>This is the archive page for all the materials I used for tutoring CS 115 at Univeristy of Waterloo.</description>
+      
+    </item>
+    
     <item>
       <title>Items I&#39;ve Made</title>
       <link>http://student.cs.uwaterloo.ca/~z374zhou/bake/</link>
